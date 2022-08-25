@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="ok.css" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #edf2f9;
+      }
+      body .container {
+        display: flex;
+        width: 700px;
+        min-height: 500px;
+        background: #ecf0f3;
+        border: 1px #fff;
+        border-radius: 5px;
+        box-shadow: 3px 4px 2px 9px rgba(0, 0, 0, 0.267);
+      }
+
+      /* thiết kế menu */
+      .container .menu-container {
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        background: #ecf0f3;
+        align-items: center;
+        box-shadow: 1px 1px 5px rgba(117, 116, 116, 0.644);
+      }
+      .container .menu-container .menu-button {
+        height: 35px;
+        width: 100px;
+        margin: 10px 5px;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 1px 1px 5px rgba(117, 116, 116, 0.644);
+      }
+
+      .click-button {
+        background: blue;
+      }
+      .show {
+        display: block;
+      }
+
+      /* thiết kế nội dung hiện thị */
+
+      ul {
+        padding: 10px 35px;
+      }
+      .container .content-container {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .container .content-container .adv {
+        border: 2px solid #fff;
+        width: 90%;
+        height: 70px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+        box-shadow: 1px 1px 5px rgba(117, 116, 116, 0.644);
+        border-left: 5px solid yellow;
+        border-radius: 5px;
+      }
+      .container .content-container .box-homework {
+        width: 90%;
+        display: none;
+      }
+      .container .content-container .box-homework .sug {
+        padding: 10px 0;
+        width: 100%;
+        line-height: 25px;
+      }
+      .container .content-container .box-homework .sug .text-sug {
+        width: 100%;
+        padding: 15px 20px;
+        border: 2px solid #fff;
+        border-left: 5px solid blue;
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px rgba(117, 116, 116, 0.644);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu-container">
+        <button class="menu-button">Bài 1</button>
+        <button class="menu-button">Bài 2</button>
+        <button class="menu-button">Bài 3</button>
+        <button class="menu-button">Bài 4</button>
+        <button class="menu-button">Bài 5</button>
+      </div>
+      <div class="content-container">
+        <div class="adv">
+          <b class="text-advice"
+            >Đây chỉ là gợi ý nên người làm có thể làm khác gợi ý, miễn đúng
+            theo yêu cầu trong file đề bài</b
+          >
+        </div>
+        <div class="box-homework home-work1" id="1">
+          <h2>Tính tiền lương nhân viên</h2>
+          <div class="sug">
+            <div class="text-sug">
+              <b>Gợi ý:</b>
+              <p>Công thức: Lương = Lương 1 ngày * số ngày làm</p>
+              Kiến thức áp dụng:
+              <ul>
+                <li>Tìm tới thẻ và lấy giá trị</li>
+                <li>Tạo hàm cơ bản</li>
+                <li>Gắn sự kiện click cho button</li>
+                <li>Thay đổi nội dung cho thẻ</li>
+                <li>Xử lý load trang với button của form</li>
+              </ul>
+            </div>
+            <div class="calc">
+              <div class="input-number">
+                <input type="number" placeholder="Nhập lương một ngày" />
+                <input type="number" placeholder="Số ngày làm" />
+              </div>
+
+              <div class="pay">
+                <button id="button-result">Tính lương</button>
+                <input type="number" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box-homework home-work2" id="2">
+          <h2>Tính tiền lương nhân viên</h2>
+          <div class="sug">
+            <div class="text-sug">
+              <b>Gợi ý:</b>
+              <p>Công thức: Lương = Lương 1 ngày * số ngày làm</p>
+              Kiến thức áp dụng:
+              <ul>
+                <li>Tìm tới thẻ và lấy giá trị</li>
+                <li>Tạo hàm cơ bản</li>
+                <li>Gắn sự kiện click cho button</li>
+                <li>Thay đổi nội dung cho thẻ</li>
+                <li>Xử lý load trang với button của form</li>
+              </ul>
+            </div>
+            <div class="calc">
+              <div class="input-number">
+                <input type="number" placeholder="Nhập lương một ngày" />
+                <input type="number" placeholder="Số ngày làm" />
+              </div>
+
+              <div class="pay">
+                <button class="button-result">Tính lương</button>
+                <input type="number" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box-homework home-work3" id="3">
+          <h2>Tính tiền lương nhân viên</h2>
+          <div class="sug">
+            <div class="text-sug">
+              <b>Gợi ý:</b>
+              <p>Công thức: Lương = Lương 1 ngày * số ngày làm</p>
+              Kiến thức áp dụng:
+              <ul>
+                <li>Tìm tới thẻ và lấy giá trị</li>
+                <li>Tạo hàm cơ bản</li>
+                <li>Gắn sự kiện click cho button</li>
+                <li>Thay đổi nội dung cho thẻ</li>
+                <li>Xử lý load trang với button của form</li>
+              </ul>
+            </div>
+            <div class="calc">
+              <div class="input-number">
+                <input type="number" placeholder="Nhập lương một ngày" />
+                <input type="number" placeholder="Số ngày làm" />
+              </div>
+
+              <div class="pay">
+                <button class="button-result">Tính lương</button>
+                <input type="number" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box-homework home-work4" id="4">
+          <h2>Tính tiền lương nhân viên</h2>
+          <div class="sug">
+            <div class="text-sug">
+              <b>Gợi ý:</b>
+              <p>Công thức: Lương = Lương 1 ngày * số ngày làm</p>
+              Kiến thức áp dụng:
+              <ul>
+                <li>Tìm tới thẻ và lấy giá trị</li>
+                <li>Tạo hàm cơ bản</li>
+                <li>Gắn sự kiện click cho button</li>
+                <li>Thay đổi nội dung cho thẻ</li>
+                <li>Xử lý load trang với button của form</li>
+              </ul>
+            </div>
+            <div class="calc">
+              <div class="input-number">
+                <input type="number" placeholder="Nhập lương một ngày" />
+                <input type="number" placeholder="Số ngày làm" />
+              </div>
+
+              <div class="pay">
+                <button class="button-result">Tính lương</button>
+                <input type="number" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box-homework home-work5" id="5">
+          <h2>Tính tiền lương nhân viên</h2>
+          <div class="sug">
+            <div class="text-sug">
+              <b>Gợi ý:</b>
+              <p>Công thức: Lương = Lương 1 ngày * số ngày làm</p>
+              Kiến thức áp dụng:
+              <ul>
+                <li>Tìm tới thẻ và lấy giá trị</li>
+                <li>Tạo hàm cơ bản</li>
+                <li>Gắn sự kiện click cho button</li>
+                <li>Thay đổi nội dung cho thẻ</li>
+                <li>Xử lý load trang với button của form</li>
+              </ul>
+            </div>
+            <div class="calc">
+              <div class="input-number">
+                <input type="number" placeholder="Nhập lương một ngày" />
+                <input type="number" placeholder="Số ngày làm" />
+              </div>
+
+              <div class="pay">
+                <button class="button-result">Tính lương</button>
+                <input type="number" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    var btn = document.getElementsByClassName("menu-button");
+    var box = document.getElementsByClassName("box-homework");
+
+    for (var i = 0; i < btn.length; i++) {
+      btn[i].addEventListener("click", turnLight);
+    }
+    function turnLight() {
+      for (var i = 0; i < btn.length; i++) {
+        btn[i].classList.remove("click-button");
+      }
+      this.classList.add("click-button");
+      for (var i = 0; i < box.length; i++) {
+        box[i].classList.remove("show");
+      }
+      box[this.id-1].classList.add("show");
+    }
+  </script>
+</html>
